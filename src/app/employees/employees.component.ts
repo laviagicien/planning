@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
-  listOfEmployees: Array = ['emp1','emp2', 'emp3'];
+  listOfEmployees: Array<String> = ['emp1','emp2', 'emp3'];
   constructor() { }
 
   ngOnInit() {
