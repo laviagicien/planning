@@ -8,21 +8,15 @@ import { Time } from '@angular/common';
 })
 export class ScheduleComponent implements OnInit {
 
-  start = this.convertStgToTime('7:30');
-
-  end: Time = {
-    hours : 20,
-    minutes : 45
-  }
+  start = this.convertStgToTime('7:00');
+  end = this.convertStgToTime('20:45');
 
   rngOfDayMin = this.convInMin(this.end) - this.convInMin(this.start);
-
   rangeOfDay = this.convInTime(this.rngOfDayMin);
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.start);
   }
 
   convInMin (time: Time): number {
@@ -40,11 +34,11 @@ export class ScheduleComponent implements OnInit {
     return result;
   }
 
-  convertStgToTime (text: String): Time {
-    const splitText: Array<string> = text.split(':');
+  convertStgToTime (text: string): Time {
+    const splitText = text.split(':');
     return {
-      hours : parseInt(splitText[0], 1),
-      minutes: parseInt(splitText[1], 1)
+      hours : parseInt(splitText[0], 10),
+      minutes: parseInt(splitText[1], 10)
     };
 
   }
