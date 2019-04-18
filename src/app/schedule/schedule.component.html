@@ -1,12 +1,12 @@
 <div class="container">
   <div class="border row" id="day">
-    <div class="border col rounded" id="mornShift" style="height: 50%; margin: .5% 0; background-color: chocolate">
-      <span class="left">8:30</span>
-      <span class="right">13:00</span>
+    <div class="border col rounded" id="mornShift" style="height: 50%; margin: .5% 0; background-color: lightcoral">
+      <span class="left">{{day.matin.debut}}</span>
+      <span class="right">{{day.matin.fin}}</span>
     </div>
-    <div class="border col rounded" id="afternShift" style="height: 50%; margin: .5% 0; background-color: chocolate">
-      <span class="left">15:30</span>
-      <span class="right">20:45</span>
+    <div class="border col rounded" id="afternShift" style="height: 50%; margin: .5% 0; background-color: lightcoral">
+      <span class="left">{{day.soir.debut}}</span>
+      <span class="right">{{day.soir.fin}}</span>
     </div>
   </div>
 </div>

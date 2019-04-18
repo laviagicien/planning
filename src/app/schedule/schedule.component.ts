@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Time } from '@angular/common';
+import { Day } from '../models/day.model';
 
 @Component({
   selector: 'app-schedule',
@@ -14,9 +15,16 @@ export class ScheduleComponent implements OnInit {
   rngOfDayMin = this.convInMin(this.end) - this.convInMin(this.start);
   rangeOfDay = this.convInTime(this.rngOfDayMin);
 
+  day = new Day('8:30', '13:00', '15:30', '20:45');
+
+  morningShift = document.getElementById('mornShift');
+  afternoonShit = document.getElementById('afternShift');
+  daycont = document.getElementById('day')
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.day);
   }
 
   convInMin (time: Time): number {
@@ -42,5 +50,9 @@ export class ScheduleComponent implements OnInit {
     };
 
   }
+
+  settingBarLenght()
+
+
 
 }
